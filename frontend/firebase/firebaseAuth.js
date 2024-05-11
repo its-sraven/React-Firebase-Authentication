@@ -23,7 +23,7 @@ export const signUpWithEmail = async (email, password) => {
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         // Send verification email
-        await sendEmailVerification(auth.currentUser);
+        // await sendEmailVerification(auth.currentUser);
         return userCredential.user;
     } catch (error) {
         console.error('User creation failed...', error);
